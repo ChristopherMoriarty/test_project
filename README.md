@@ -29,7 +29,7 @@ To install the project dependencies, follow these steps:
 
 To perform database migrations using Alembic, follow these commands:
 
-###Before creating migrations, create a 'versions' folder in the 'migrations' directory! 
+Before creating migrations, create a 'versions' folder in the 'migrations' directory! 
 
 1. Create a migration:
 
