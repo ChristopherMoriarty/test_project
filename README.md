@@ -50,12 +50,15 @@ Navigate to the `src` directory:
   ```
 
 Launch the project using Uvicorn:
+
   ```bash
-  uvicorn main:app
+  uvicorn main:app 
   ```
 
 ## Running Tests
+
 To run tests, use the following command:
+
   ```bash
   pytest tests/
   ```
