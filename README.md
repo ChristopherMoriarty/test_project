@@ -1,29 +1,58 @@
-# test_project
+# Test Project
 
-Dependency installation:
+## Dependency Installation
 
-use python 3.8.10 for virtual environment
-pip install requirements.txt
+To install the project dependencies, follow these steps:
 
+1. Use Python version 3.8.10 to create a virtual environment:
 
-Create .env file in the project's root directory and and place the database paths there
+    ```bash
+    python3.8.10 -m venv venv
+    ```
 
-DATABASE_URL=sqlite+aiosqlite:///your_path/my_db.db
-DATABASE_URL_TEST=sqlite+aiosqlite:///your_path/my_db_test.db
+2. Install the dependencies from the `requirements.txt` file using pip:
 
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-Perform migrations using Alembic: 
+## Database Configuration
 
-alembic revision --autogenerate -m "db creation"
-alembic upgrade head 
+1. Create a `.env` file in the project's root directory and specify the database paths:
 
+    ```plaintext
+    DATABASE_URL=sqlite+aiosqlite:///your_path/my_db.db
+    DATABASE_URL_TEST=sqlite+aiosqlite:///your_path/my_db_test.db
+    ```
 
-Start project:
+## Performing Migrations Using Alembic
 
-cd src
-uvicorn main:app
+To perform database migrations using Alembic, follow these commands:
 
+1. Create a migration:
 
-Start tests:
+    ```bash
+    alembic revision --autogenerate -m "Database creation"
+    ```
 
-pytest tests/
+2. Apply the migration:
+
+    ```bash
+    alembic upgrade head
+    ```
+
+## Starting the Project
+
+Navigate to the `src` directory:
+
+  ```bash
+  cd src
+  ```
+
+Launch the project using Uvicorn:
+  uvicorn main:app
+
+## Running Tests
+To run tests, use the following command:
+  pytest tests/
+
