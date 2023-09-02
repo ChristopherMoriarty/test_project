@@ -59,7 +59,7 @@ Launch the project using Uvicorn:
 
 ## Running Tests
 
-To run tests, use the following command:
+To run tests, use the following command in main directory:
 
   ```bash
   pytest tests/
